@@ -74,12 +74,17 @@ if __name__ == "__main__":
         # create symbolic links fo the libraries
         print('creating symbolic links...')
 
+        #libtensorflow = 'tensorflow_framework'
         libtensorflow = 'tensorflow_framework'
         pywrap_tensorflow_internal = 'pywrap_tensorflow_internal'
 
+        print('libtensorflow  = "{}"'.format(libtensorflow))
         libtensorflow_name = 'lib{}.so.{}'.format(libtensorflow, major_version)
+        print('libtensorflow_name  = "{}"'.format(libtensorflow_name))
         src = join(tf_dir, libtensorflow_name)
+        print('src "{}"'.format(src))
         tgt = join(context, 'lib', libtensorflow_name)
+        print('tgt "{}"'.format(tgt))
         call(['ln', '-sf', src, tgt])
 
         pywrap_tensorflow_name = '_{}.so'.format(pywrap_tensorflow_internal)

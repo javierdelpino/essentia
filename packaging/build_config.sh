@@ -1,9 +1,9 @@
-#!/bin/sh
+#!/bin/sh  
 
-HOST=i686-w64-mingw32
-if [ -z "${PREFIX}" ]; then
+HOST=i686-w64-mingw32  
+if [ -z "${PREFIX}" ]; then  
     PREFIX=`pwd`
-fi
+fi  
 echo Installing to: $PREFIX
 
 #SHARED_OR_STATIC="
@@ -16,8 +16,8 @@ SHARED_OR_STATIC="
 --enable-static
 "
 
-EIGEN_VERSION=3.3.7
-FFMPEG_VERSION=ffmpeg-2.8.12
+EIGEN_VERSION=3.4.0
+FFMPEG_VERSION=ffmpeg-7.0
 LAME_VERSION=3.100
 TAGLIB_VERSION=taglib-1.11.1
 ZLIB_VERSION=zlib-1.2.12
@@ -27,7 +27,7 @@ LIBYAML_VERSION=yaml-0.1.5
 CHROMAPRINT_VERSION=1.4.3
 QT_SOURCE_URL=https://download.qt.io/archive/qt/4.8/4.8.4/qt-everywhere-opensource-src-4.8.4.tar.gz
 GAIA_VERSION=2.4.6-86-ged433ed
-TENSORFLOW_VERSION=2.5.0
+TENSORFLOW_VERSION=2.16.1
 
 
 FFMPEG_AUDIO_FLAGS="

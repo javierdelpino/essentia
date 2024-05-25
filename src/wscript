@@ -144,7 +144,7 @@ def configure(ctx):
        return
 
     ctx.check_cfg(package=lib_map['EIGEN3'], uselib_store='EIGEN3',
-                  args=['eigen3 >= 3.3.4'] + check_cfg_args)
+                  args=['eigen3 >= 3.4.0'] + check_cfg_args)
 
     # Disable Eigen warnings related to meaningless type qualifiers
     # https://gitlab.com/libeigen/eigen/-/issues/115

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh  
 set -e
 BASEDIR=$(dirname $0)
 cd $BASEDIR/debian_3rdparty

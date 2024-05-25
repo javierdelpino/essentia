@@ -286,7 +286,7 @@ def configure(ctx):
     # use manually prebuilt dependencies in the case of static examples or mingw cross-build
     if ctx.options.CROSS_COMPILE_MINGW32:
         print ("→ Cross-compiling for Windows with MinGW")
-        os.environ["PKG_CONFIG_PATH"] = 'packaging/win32_3rdparty/lib/pkgconfig'
+        os.environ["PKG_CONFIG_PATH"] = 'packaging/win32_3rdparty/pkgconfig'
 
         # locate MinGW compilers and use them
         ctx.find_program('i686-w64-mingw32-gcc', var='CC')
@@ -305,7 +305,7 @@ def configure(ctx):
         
         if not ctx.env.ONLY_PYTHON:
             print ("→ Building with static dependencies on Linux/OSX")
-            os.environ["PKG_CONFIG_PATH"] = 'packaging/debian_3rdparty/lib/pkgconfig'
+            os.environ["PKG_CONFIG_PATH"] = 'packaging/debian_3rdparty/pkgconfig'
         
         # flags required for linking to static ffmpeg libs
         # -Bsymbolic flag is not available on clang
